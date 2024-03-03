@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API_KEY_GENERATOR</title>
+    {%load static%}
+    <link href="{% static 'css/main.css'%}" rel="stylesheet">
+</head>
+
+<body class="flex_col center center">
+    <main class="flex_col bg_c2 border_rad_20 padding_20">
+        <h1>Get you ecg api key</h1>
+        <form action="create/" accept-charset="UTF-8" method="post" id="post-form">
+            {% csrf_token %}
+            <div class="flex-col bg_c1 center padding_20 border_rad_20">
+                <label for="username">UserName</label>
+                <br>
+                <input type="text" placeholder="username" name="username" autocomplete="username">
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" placeholder="email" name="mail" autocomplete="email">
+                <br>
+                <label for="phone">phonenumber</label>
+                <br>
+                <input type="phone" placeholder="mobilenumber" name="phone">
+                <br>
+                <button>Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
